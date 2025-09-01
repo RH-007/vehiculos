@@ -29,6 +29,28 @@ while True:
     elif tipo == "3":
         tipo_vehiculo = "camiones"  
         break  
+
+while True:
+    tipo = input("Es necesario preguntar si quiere un auto que tipo de auto: camioneta (1), sedan (2), hatchback (3), pick-up (4), vans (5), deportivo (6): ")
+
+    if tipo == "1":
+        categoria = "camionetas-suv"
+        break
+    elif tipo == "2":
+        categoria = "sedan"
+        break
+    elif tipo == "3":
+        categoria = "hatchback" 
+        break  
+    elif tipo == "4":
+        categoria = "pick-up" 
+        break  
+    elif tipo == "5":
+        categoria = "vans" 
+        break  
+    elif tipo == "6":
+        categoria = "deportivo" 
+        break  
     
 while True:
     tipo = input("Es necesario preguntar si quiere una unidad: nuevo (1), usados (2) o seminuevos (3): ")
@@ -44,49 +66,46 @@ while True:
         unidad = "seminuevos"
         break  
 
-print(f"\nSe extraerán datos de: {tipo_vehiculo} - {unidad}")
+print(f"\nSe extraerán datos de: {tipo_vehiculo} - {categoria}- {unidad}")
 
 print("\nGenerando URLs a extraer...")
 ## Generacion de URLs a extraer
 
-paginas = []
 
-if unidad == "usados":
-    for i in  range(1, 182):
-        url = f"https://neoauto.com/venta-de-{tipo_vehiculo}-{unidad}?page={i}"
-        paginas.append({
-            "url": url,
-            "tipo": unidad,
-            "tipo_vehiculo": tipo_vehiculo
-        })
+url = url = f"https://neoauto.com/venta-de-{tipo_vehiculo}-{unidad}--{categoria}"
+print(url)
 
-if unidad == "nuevos":
-    for i in  range(1, 7):
-        url = f"https://neoauto.com/venta-de-{tipo_vehiculo}-{unidad}?page={i}"
-        paginas.append({
-            "url": url,
-            "tipo": unidad,
-            "tipo_vehiculo": tipo_vehiculo
-        })
-
-if unidad == "seminuevos":
-    for i in  range(1, 44):
-        url = f"https://neoauto.com/venta-de-{tipo_vehiculo}-{unidad}?page={i}"
-        paginas.append({
-            "url": url,
-            "tipo": unidad,
-            "tipo_vehiculo": tipo_vehiculo
-        })
-
-print("\nInicio de Extraccion de datos...")
 
 options = webdriver.ChromeOptions()
 # options.add_argument("--headless")   # modo oculto
 options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
-# options.add_experimental_option("excludeSwitches", ["enable-automation"])
-# options.add_experimental_option('useAutomationExtension', False)
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options = options)
-# driver.minimize_window()
+driver.get(url)
+
+resultados = driver.find_element(By.CLASS_NAME, "s-results__count")
+
+paginas_consulta = int(re.sub(r'[^\d]', '', resultados.text.split()[0]))
+print(paginas_consulta)
+
+
+numero_paginas = (paginas_consulta // 20) + 1
+print("Numero de paginas a extraer:", numero_paginas)
+
+paginas = []
+
+if unidad == "usados":
+    for i in  range(1, numero_paginas+1):
+        url = f"https://neoauto.com/venta-de-{tipo_vehiculo}-{unidad}--{categoria}?page={i}"
+        paginas.append({
+            "url": url,
+            "tipo": unidad,
+            "tipo_vehiculo": tipo_vehiculo,
+            "categoria": categoria
+        })
+
+
+
+print("\nInicio de Extraccion de datos...")
 
 # --- Config mínimo ---
 YEAR_RX  = re.compile(r'\b(19[8-9]\d|20[0-3]\d)\b')
@@ -139,6 +158,12 @@ def parse_brand_model_year(t):
     modelo = re.sub(re.escape(marca), '', t, flags=re.I).strip() if marca != "Otra Marca" else t
     if anio: modelo = re.sub(rf'\b{anio}\b', '', modelo).strip()
     return t, marca, modelo, anio
+
+
+options = webdriver.ChromeOptions()
+# options.add_argument("--headless")   # modo oculto
+options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
+driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options = options)
 
 neo_autos = []
 
@@ -199,6 +224,7 @@ for pagina in paginas:  # pagina = {"url": ..., "tipo": ..., "tipo_vehiculo": ..
         neo_autos.append({
             "titulo": titulo,
             "tipo_vehiculo": pagina["tipo_vehiculo"],
+            "categoria": pagina["categoria"],
             "marca": marca,
             "modelo": modelo,
             "año": anio,
@@ -211,8 +237,6 @@ for pagina in paginas:  # pagina = {"url": ..., "tipo": ..., "tipo_vehiculo": ..
         })
     
 
-driver.quit()
-
 print(f"\nSe extrajeorn informacion de {len(neo_autos)} unidades\n")
 
 ## Guardando el Archivo.
@@ -222,7 +246,7 @@ print("\nGenerando archivo CSV...\n")
 neo_autos_df = pd.DataFrame(neo_autos)
 
 
-ruta_salida = rf"C:\Users\PC\Desktop\Proyectos\Proyectos_Py\7.Analisis_Autos\vehiculos\data\neo_autos_{tipo_vehiculo}_{unidad}.csv"
+ruta_salida = rf"C:\Users\PC\Desktop\Proyectos\Proyectos_Py\7.Analisis_Autos\vehiculos\data\neo_autos_{tipo_vehiculo}_{categoria}_{unidad}.csv"
 
 neo_autos_df.to_csv(ruta_salida
                     , index=False
