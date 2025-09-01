@@ -53,19 +53,21 @@ st.write("Cantidad de registros:", df.shape[0])
 ## Agregando de filtros
 st.header("🔍 Vista previa de los datos")
 
-tipo = st.multiselect("Tipo de vehículo", options=df["tipo"].unique(), default=df["tipo"].unique())
-marca = st.multiselect("Marca", options=df["marca"].unique(), default=df["marca"].unique())
-año = st.multiselect("Año", options=df["año"].unique(), default=df["año"].unique())
-precio_etiqueta = st.multiselect("Rango de precio", options=df["precio_etiqueta"].unique(), default=df["precio_etiqueta"].unique())
+tipo = st.selectbox("Tipo de vehículo", options=df["tipo"].unique())
+marca = st.selectbox("Marca", options=df["marca"].unique())
+# año = st.selectbox("Año", options=df["año"].unique())
+# precio_etiqueta = st.selectbox("Rango de precio", options=df["precio_etiqueta"].unique())
 
 filtro = df[
-    df["tipo"].isin(tipo) &
-    df["marca"].isin(marca) & 
-    df["año"].isin(año) & 
-    df["precio_etiqueta"].isin(precio_etiqueta)
-    ]
+    (df["tipo"] == tipo) &
+    (df["marca"] == marca) 
+    # &
+    # (df["año"] == año) &
+    # (df["precio_etiqueta"] == precio_etiqueta)
+]
 
-st.dataframe(filtro)
+
+st.dataframe(filtro, use_container_width=True, height=1000)
 
 st.divider()
 
