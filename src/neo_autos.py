@@ -107,17 +107,17 @@ BRANDS = sorted([
     
         # Estados Unidos
         "Buick","Cadillac","Chevrolet","Chrysler","Dodge","Ford","GMC","Hummer","Jeep",
-        "Lincoln","Ram","Tesla",
+        "Lincoln","Ram","Tesla","Plymouth",
     
         # China (muy usados en Latam)
         "BAIC","BYD","Changan","Chery","DFSK","Dongfeng","FAW","Foton","Geely","Great Wall",
-        "Haval","JAC","Jetour","Maxus","MG","Omoda","Zotye", "JMC",
+        "Haval","JAC","Jetour","Maxus","MG","Omoda","Zotye", "JMC", "Gac", "Soueast"
     
         # India
         "Mahindra","Tata",
     
         # Reino Unido
-        "Lotus","Morgan","Noble","Vauxhall",
+        "Lotus","Morgan","Noble","Vauxhall", "Mc Laren", "Lancia",
     
         # Otros/Exóticos
         "Abarth","Apollo","Arash","Arrinera","Artega","Brilliance","Caterham","DeLorean",
@@ -184,17 +184,49 @@ for pagina in paginas:  # pagina = {"url": ..., "tipo": ..., "tipo_vehiculo": ..
         # precio (si no hay, None)
         try:
             precio = card.find_element(By.CSS_SELECTOR, ".c-results-mount__price").text
+
         except:
             precio = None
 
         # detalle (opcional)
         try:
             detalle = card.find_element(By.CSS_SELECTOR, ".c-results-details__description").text
+
+            # normaliza y separa líneas no vacías
+            t = re.sub(r'[\r\xa0]', ' ', detalle).strip()
+            lines = [l.strip() for l in t.splitlines() if l.strip()]
+
+            # 1) combustible y transmisión (vienen en la 1ra línea separados por "|")
+            combustible = transmision_raw = None
+            if lines:
+                p0 = re.split(r'\s*\|\s*', lines[0])  # acepta con o sin espacios: "Gasolina|Automática - Secuencial"
+                combustible = p0[0].title() if p0 else None
+                transmision_raw = p0[1] if len(p0) > 1 else None
+
+            # 1.1) separa transmisión en tipo y caja si viene "Automática - Secuencial"
+            tipo_transmision = caja = None
+            if transmision_raw:
+                parts = [p.strip() for p in transmision_raw.split("-")]
+                tipo_transmision = parts[0]
+                caja = parts[1] if len(parts) > 1 else None
+
+            # 2) kilometraje (busca en todo el texto)
+            km_m = re.search(r'(\d[\d.,]*)\s*kms?', t, flags=re.I)
+            kilometraje_km = int(re.sub(r'[^\d]', '', km_m.group(1))) if km_m else None
+
+            # 3) ubicación (primera línea con coma que no sea "Kms")
+            ubicacion = next((l for l in lines if ',' in l and 'km' not in l.lower()), None)
+            
         except:
             detalle = ""
+            
 
         # tags (opcionales)
-        tags = [e.text for e in card.find_elements(By.CSS_SELECTOR, ".c-results-tag__stick") if e.text.strip()]
+        tags = [e.text.strip() for e in card.find_elements(By.CSS_SELECTOR, ".c-results-tag__stick") if e.text.strip()]
+
+        if len(tags) == 1:
+            tags = tags[0]
+        
 
         neo_autos.append({
             "titulo": titulo,
@@ -204,6 +236,11 @@ for pagina in paginas:  # pagina = {"url": ..., "tipo": ..., "tipo_vehiculo": ..
             "año": anio,
             "precio": precio,
             "detalle": detalle,
+            "combustible": combustible,
+            "tipo_transmision": tipo_transmision,
+            "caja": caja,
+            "kilometraje_km": kilometraje_km,
+            "ubicacion": ubicacion, 
             "tags": tags,
             "url_auto": url,
             "tipo": pagina["tipo"],
