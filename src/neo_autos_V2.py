@@ -17,54 +17,41 @@ import re, time
 
 ## Extraccion de Informacion de segun el tipo de Vehicuklo y Condicion
 
-while True:
-    tipo = input("Es necesario preguntar que tipo de unidad quiere extraer: autos (1), motos (2) o camiones (3): ")
+def get_user_choice(prompt, choices):
+    """Función para obtener una elección válida del usuario a partir de un diccionario."""
+    while True:
+        print(prompt)
+        for key, (desc, val) in choices.items():
+            print(f"  {desc} ({key})")
+        choice = input("Su elección: ")
+        if choice in choices:
+            return choices[choice][1]
+        else:
+            print("\nOpción no válida. Por favor, intente de nuevo.\n")
 
-    if tipo == "1":
-        tipo_vehiculo = "autos"
-        break
-    elif tipo == "2":
-        tipo_vehiculo = "motos"
-        break
-    elif tipo == "3":
-        tipo_vehiculo = "camiones"  
-        break  
+# Definimos las opciones para que sea más fácil de mantener
+TIPO_VEHICULO_CHOICES = {
+    "1": ("autos", "autos"),
+    "2": ("motos", "motos"),
+    "3": ("camiones", "camiones")
+}
+CATEGORIA_CHOICES = {
+    "1": ("camioneta", "camionetas-suv"),
+    "2": ("sedan", "sedan"),
+    "3": ("hatchback", "hatchback"),
+    "4": ("pick-up", "pick-up"),
+    "5": ("vans", "vans"),
+    "6": ("deportivo", "deportivo")
+}
+UNIDAD_CHOICES = {
+    "1": ("nuevo", "nuevos"),
+    "2": ("usados", "usados"),
+    "3": ("seminuevos", "seminuevos")
+}
 
-while True:
-    tipo = input("Es necesario preguntar si quiere un auto que tipo de auto: camioneta (1), sedan (2), hatchback (3), pick-up (4), vans (5), deportivo (6): ")
-
-    if tipo == "1":
-        categoria = "camionetas-suv"
-        break
-    elif tipo == "2":
-        categoria = "sedan"
-        break
-    elif tipo == "3":
-        categoria = "hatchback" 
-        break  
-    elif tipo == "4":
-        categoria = "pick-up" 
-        break  
-    elif tipo == "5":
-        categoria = "vans" 
-        break  
-    elif tipo == "6":
-        categoria = "deportivo" 
-        break  
-    
-while True:
-    tipo = input("Es necesario preguntar si quiere una unidad: nuevo (1), usados (2) o seminuevos (3): ")
-
-    unidad = ""
-    if tipo == "1":
-        unidad = "nuevos"
-        break
-    elif tipo == "2":
-        unidad = "usados"
-        break
-    elif tipo == "3":
-        unidad = "seminuevos"
-        break  
+tipo_vehiculo = get_user_choice("¿Qué tipo de unidad quiere extraer?", TIPO_VEHICULO_CHOICES)
+categoria = get_user_choice("¿Qué categoría de auto desea?", CATEGORIA_CHOICES)
+unidad = get_user_choice("¿Qué condición de unidad busca?", UNIDAD_CHOICES)
 
 print(f"\nSe extraerán datos de: {tipo_vehiculo} - {categoria}- {unidad}")
 
@@ -72,7 +59,7 @@ print("\nGenerando URLs a extraer...")
 ## Generacion de URLs a extraer
 
 
-url = url = f"https://neoauto.com/venta-de-{tipo_vehiculo}-{unidad}--{categoria}"
+url = f"https://neoauto.com/venta-de-{tipo_vehiculo}-{unidad}--{categoria}"
 print(url)
 
 
@@ -85,25 +72,24 @@ driver.get(url)
 resultados = driver.find_element(By.CLASS_NAME, "s-results__count")
 
 paginas_consulta = int(re.sub(r'[^\d]', '', resultados.text.split()[0]))
-print(paginas_consulta)
 
+print("\nNumero de Anuncios a extraer:", paginas_consulta)
 
 numero_paginas = (paginas_consulta // 20) + 1
-print("Numero de paginas a extraer:", numero_paginas)
+
+print("\nNumero de paginas a extraer:", numero_paginas)
 
 paginas = []
 
-if unidad == "usados":
-    for i in  range(1, numero_paginas+1):
-        url = f"https://neoauto.com/venta-de-{tipo_vehiculo}-{unidad}--{categoria}?page={i}"
-        paginas.append({
-            "url": url,
-            "tipo": unidad,
-            "tipo_vehiculo": tipo_vehiculo,
-            "categoria": categoria
-        })
-
-
+# Este bucle debe ejecutarse siempre, no solo para "usados".
+for i in  range(1, numero_paginas+1):
+    url_pagina = f"https://neoauto.com/venta-de-{tipo_vehiculo}-{unidad}--{categoria}?page={i}"
+    paginas.append({
+        "url": url_pagina,
+        "tipo": unidad,
+        "tipo_vehiculo": tipo_vehiculo,
+        "categoria": categoria
+    })
 
 print("\nInicio de Extraccion de datos...")
 
@@ -159,12 +145,6 @@ def parse_brand_model_year(t):
     if anio: modelo = re.sub(rf'\b{anio}\b', '', modelo).strip()
     return t, marca, modelo, anio
 
-
-options = webdriver.ChromeOptions()
-# options.add_argument("--headless")   # modo oculto
-options.add_argument("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36")
-driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options = options)
-
 neo_autos = []
 
 for pagina in paginas:  # pagina = {"url": ..., "tipo": ..., "tipo_vehiculo": ...}
@@ -209,17 +189,49 @@ for pagina in paginas:  # pagina = {"url": ..., "tipo": ..., "tipo_vehiculo": ..
         # precio (si no hay, None)
         try:
             precio = card.find_element(By.CSS_SELECTOR, ".c-results-mount__price").text
+
         except:
             precio = None
 
         # detalle (opcional)
         try:
             detalle = card.find_element(By.CSS_SELECTOR, ".c-results-details__description").text
+
+            # normaliza y separa líneas no vacías
+            t = re.sub(r'[\r\xa0]', ' ', detalle).strip()
+            lines = [l.strip() for l in t.splitlines() if l.strip()]
+
+            # 1) combustible y transmisión (vienen en la 1ra línea separados por "|")
+            combustible = transmision_raw = None
+            if lines:
+                p0 = re.split(r'\s*\|\s*', lines[0])  # acepta con o sin espacios: "Gasolina|Automática - Secuencial"
+                combustible = p0[0].title() if p0 else None
+                transmision_raw = p0[1] if len(p0) > 1 else None
+
+            # 1.1) separa transmisión en tipo y caja si viene "Automática - Secuencial"
+            tipo_transmision = caja = None
+            if transmision_raw:
+                parts = [p.strip() for p in transmision_raw.split("-")]
+                tipo_transmision = parts[0]
+                caja = parts[1] if len(parts) > 1 else None
+
+            # 2) kilometraje (busca en todo el texto)
+            km_m = re.search(r'(\d[\d.,]*)\s*kms?', t, flags=re.I)
+            kilometraje_km = int(re.sub(r'[^\d]', '', km_m.group(1))) if km_m else None
+
+            # 3) ubicación (primera línea con coma que no sea "Kms")
+            ubicacion = next((l for l in lines if ',' in l and 'km' not in l.lower()), None)
+            
         except:
             detalle = ""
+            
 
         # tags (opcionales)
-        tags = [e.text for e in card.find_elements(By.CSS_SELECTOR, ".c-results-tag__stick") if e.text.strip()]
+        tags = [e.text.strip() for e in card.find_elements(By.CSS_SELECTOR, ".c-results-tag__stick") if e.text.strip()]
+
+        if len(tags) == 1:
+            tags = tags[0]
+        
 
         neo_autos.append({
             "titulo": titulo,
@@ -230,6 +242,11 @@ for pagina in paginas:  # pagina = {"url": ..., "tipo": ..., "tipo_vehiculo": ..
             "año": anio,
             "precio": precio,
             "detalle": detalle,
+            "combustible": combustible,
+            "tipo_transmision": tipo_transmision,
+            "caja": caja,
+            "kilometraje_km": kilometraje_km,
+            "ubicacion": ubicacion, 
             "tags": tags,
             "url_auto": url,
             "tipo": pagina["tipo"],
@@ -246,7 +263,7 @@ print("\nGenerando archivo CSV...\n")
 neo_autos_df = pd.DataFrame(neo_autos)
 
 
-ruta_salida = rf"C:\Users\PC\Desktop\Proyectos\Proyectos_Py\7.Analisis_Autos\vehiculos\data\neo_autos_{tipo_vehiculo}_{categoria}_{unidad}.csv"
+ruta_salida = rf"C:\Users\PC\Desktop\Proyectos\Proyectos_Py\7.Analisis_Autos\vehiculos\data\categoria\neo_autos_{tipo_vehiculo}_{categoria}_{unidad}.csv"
 
 neo_autos_df.to_csv(ruta_salida
                     , index=False
@@ -254,4 +271,7 @@ neo_autos_df.to_csv(ruta_salida
                     , encoding="utf-8-sig"
                     )
 
+driver.quit() # Es una buena práctica cerrar el driver al final.
+
 print("\nArchivo CSV generado con exito! Fin :D\n")
+print(f"\nArchivo Creado: neo_autos_{tipo_vehiculo}_{categoria}_{unidad}.csv\n")
