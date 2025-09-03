@@ -259,3 +259,23 @@ with tab2:
         , disabled=True
         # , height=1000
     )
+    
+    
+    
+    st.subheader("Estadisticas por Categoria", divider = "blue")
+    
+    c1, c2 = st.columns(2, gap="small")
+    with c1:
+        st.markdown("**Tipo de Autos**")
+        input_tipo_ce = st.selectbox(
+            "Tipo de Auto", tipo_c, key="key_tipo_c_e",
+            label_visibility="collapsed"
+        )
+        
+    with c2:
+        st.markdown("**Elegir Categoria**")
+        input_marca_ce = st.selectbox(
+            "marca", categoria_c, key="key_marca_c_e",
+            label_visibility="collapsed"
+        )
+        
