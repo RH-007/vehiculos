@@ -279,3 +279,43 @@ with tab2:
             label_visibility="collapsed"
         )
         
+    df_filtrado_c = data_categoria.copy()
+
+    if input_tipo_ce != "Todos":
+        df_filtrado_c = df_filtrado_c[df_filtrado_c["tipo"] == input_tipo_ce].reset_index(drop=True)
+    
+    if input_marca_ce != "Todos":
+        df_filtrado_c = df_filtrado_c[df_filtrado_c["categoria"] == input_marca_ce].reset_index(drop=True)
+
+    st.write("Cantidad de autos encontrados:", df_filtrado_c.shape[0])
+    
+    # st.table(df_filtrado_c)
+    
+    data_agrupada = df_filtrado_c.groupby("marca")
+    
+    data_agrupada_df_cat = data_agrupada["precio"].agg(
+        n="count",
+        min="min", max="max",
+        p05=lambda s: s.quantile(0.05),
+        q1=lambda s: s.quantile(0.25),
+        median="median",
+        promedio="mean",
+        q3=lambda s: s.quantile(0.75).round(2),
+        p95=lambda s: s.quantile(0.95).round(2)
+        )
+
+    cols_precios = [c for c in data_agrupada_df_cat.columns if c != "n"]
+    data_agrupada_df_fmt = data_agrupada_df_cat.copy()
+    data_agrupada_df_fmt[cols_precios] = data_agrupada_df_fmt[cols_precios]\
+        .applymap(lambda x: f"$ {x:,.0f}")
+
+    st.data_editor(
+        data_agrupada_df_fmt.sort_values("n", ascending=False),
+        use_container_width=True,
+        column_config={
+            "marca": st.column_config.TextColumn("Marca", disabled=True)
+        },
+        disabled=True,
+        key="data_agrupada_df_fmt"
+    )
+    
