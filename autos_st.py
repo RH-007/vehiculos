@@ -159,17 +159,13 @@ data_categoria = load_data(file_path_categoria)
 
 
 ## Variables
-tipo_c = data_categoria["tipo"].unique().tolist()
-tipo_c.append("Todos")
+tipo_c = ["Todos"] +  data_categoria["tipo"].unique().tolist()
 
-marca_c = data_categoria["marca"].unique().tolist()
-marca_c.append("Todos")
+marca_c = ["Todos"] + data_categoria["marca"].unique().tolist()
 
-precio_etiqueta_c = data_categoria["precio_etiqueta"].unique().tolist()
-precio_etiqueta_c.append("Todos")
+precio_etiqueta_c = ["Todos"] +  data_categoria["precio_etiqueta"].unique().tolist()
 
-categoria_c = data_categoria["categoria"].unique().tolist()
-categoria_c.append("Todos")
+categoria_c = ["Todos"] +  data_categoria["categoria"].unique().tolist()
 
 with tab2:
     
@@ -231,90 +227,72 @@ with tab2:
     )
 
 
+    st.subheader("Análisis Detallado por Vehículo", divider="blue")
+
     c1, c2, c3, c4 = st.columns(4, gap="small")
+
+    # --- Lógica de Filtros Dependientes ---
+    # Empezamos con una copia del dataframe de categorías para esta sección.
+    df_filtrado_detalle = data_categoria.copy()
+
+    # Filtro 1: Tipo de Auto
     with c1:
         st.markdown("**Tipo de Autos**")
-        input_tipo = st.selectbox(
-            "Tipo de Auto", tipo, key="key_tipo_c",
+        tipos_disponibles = ["Todos"] + df_filtrado_detalle["tipo"].unique().tolist()
+        input_tipo_detalle = st.selectbox(
+            "Tipo de Auto", tipos_disponibles, key="key_tipo_detalle",
             label_visibility="collapsed"
         )
-        
+    if input_tipo_detalle != "Todos":
+        df_filtrado_detalle = df_filtrado_detalle[df_filtrado_detalle["tipo"] == input_tipo_detalle]
+
+    # Filtro 2: Categoría
     with c2:
-        st.markdown("**Elegir marca**")
-        input_marca = st.selectbox(
-            "marca", marca, key="key_marca_c",
+        st.markdown("**Elegir Categoria**")
+        categorias_disponibles = ["Todos"] + df_filtrado_detalle["categoria"].unique().tolist()
+        input_categoria_detalle = st.selectbox(
+            "Elegir Categoria",
+            categorias_disponibles,
+            key="key_categoria_detalle",
             label_visibility="collapsed"
         )
-        
-    ## Modelo (Filtro dinámico)
-    # Creamos un dataframe temporal para filtrar los modelos disponibles.
-    # Esto asegura que la lista de modelos se actualice según las selecciones de tipo y marca.
-    df_para_modelos = data_categoria.copy()
-    if input_tipo != "Todos":
-        df_para_modelos = df_para_modelos[df_para_modelos["tipo"] == input_tipo]
-    if input_marca != "Todos":
-        df_para_modelos = df_para_modelos[df_para_modelos["marca"] == input_marca]
+    if input_categoria_detalle != "Todos":
+        df_filtrado_detalle = df_filtrado_detalle[df_filtrado_detalle["categoria"] == input_categoria_detalle]
 
-    modelos = df_para_modelos["modelo"].unique().tolist()
-    modelos.append("Todos")
-        
+    # Filtro 3: Marca
     with c3:
-        st.markdown("**Elegir Modelo**")
-        # Renombramos la variable y la key para mayor claridad (input_zona -> input_modelo)
-        input_modelo = st.selectbox(
-            "Elegir Modelo",
-            modelos,
-            key="key_modelo_c",
-            label_visibility="collapsed",
-            index=0
+        st.markdown("**Elegir marca**")
+        marcas_disponibles = ["Todos"] + df_filtrado_detalle["marca"].unique().tolist()
+        input_marca_detalle = st.selectbox(
+            "marca", marcas_disponibles, key="key_marca_detalle",
+            label_visibility="collapsed"
         )
-        
+    if input_marca_detalle != "Todos":
+        df_filtrado_detalle = df_filtrado_detalle[df_filtrado_detalle["marca"] == input_marca_detalle]
+
+    # Filtro 4: Modelo
     with c4:
-        st.markdown("**Elegir Categoria**")
-        # Renombramos la variable y la key para mayor claridad (input_zona -> input_modelo)
-        input_categoria = st.selectbox(
-            "Elegir Categoria",
-            categoria_c,
-            key="key_modelo_cat",
-            label_visibility="collapsed",
-            index=0
+        st.markdown("**Elegir Modelo**")
+        modelos_disponibles = ["Todos"] + df_filtrado_detalle["modelo"].unique().tolist()
+        input_modelo_detalle = st.selectbox(
+            "Elegir Modelo",
+            modelos_disponibles,
+            key="key_modelo_detalle",
+            label_visibility="collapsed"
         )
+    if input_modelo_detalle != "Todos":
+        df_filtrado_detalle = df_filtrado_detalle[df_filtrado_detalle["modelo"] == input_modelo_detalle]
 
-    ## Filtrado de Datos
-    # Empezamos con el dataframe completo y aplicamos filtros secuencialmente.
-    # Este método es robusto y maneja todas las combinaciones de "Todos".
-    df_filtrado = data_categoria.copy()
-
-    if input_tipo != "Todos":
-        df_filtrado = df_filtrado[df_filtrado["tipo"] == input_tipo]
-    
-    if input_marca != "Todos":
-        df_filtrado = df_filtrado[df_filtrado["marca"] == input_marca]
-
-    if input_modelo != "Todos":
-        df_filtrado = df_filtrado[df_filtrado["modelo"] == input_modelo]
-        
-    if input_modelo != "Todos":
-        df_filtrado = df_filtrado[df_filtrado["categoria"] == input_categoria]
-
-    st.write("Cantidad de autos encontrados:", df_filtrado.shape[0])
-    # st.dataframe(df_filtrado, use_container_width=True, height=1000)
+    # --- Visualización de Datos ---
+    st.write("Cantidad de autos encontrados:", df_filtrado_detalle.shape[0])
     
     existing_cols = [
         "url_auto", "titulo","modelo", "categoria", "año", 
         "kilometraje_km", "precio", "precio_etiqueta",
         "tipo_transmision", "detalle", 
         ]
-    
+
     config = {
-        # "precio": st.column_config.TextColumn("Fuente", disabled=True),
-        # "direccion": st.column_config.TextColumn("Dirección", disabled=True),
-        # "area": st.column_config.NumberColumn("Área", format="%d m²", width="small", disabled=True),
-        # "dormitorio": st.column_config.NumberColumn("Dorm.", width="small", disabled=True),
-        # "baños": st.column_config.NumberColumn("Baños", width="small", disabled=True),
-        # "estacionamientos": st.column_config.NumberColumn("Estac.", width="small", disabled=True),
-        # "caracteristica": st.column_config.TextColumn("Características", disabled=True),
-        # "enlace": st.column_config.LinkColumn("Anuncio", display_text="🔗 Abrir", validate=r"^https?://.*$"),
         "precio": st.column_config.NumberColumn("Precio ($.)", format="$. %d", disabled=True),
         "kilometraje_km": st.column_config.NumberColumn("km", format="%d km.", disabled=True),
         "tipo_transmision": st.column_config.TextColumn("Transmision", disabled=True),
@@ -322,12 +300,10 @@ with tab2:
     }
 
     
-    
     st.data_editor(
-        df_filtrado[existing_cols].sort_values("precio", ascending=True)
+        df_filtrado_detalle[existing_cols].sort_values("precio", ascending=True)
         , hide_index=True
         , use_container_width=True
         , column_config=config
         , disabled=True
-        # , height=1000
     )
