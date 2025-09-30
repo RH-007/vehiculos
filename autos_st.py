@@ -10,7 +10,7 @@ import streamlit as st
 
 ## Titulo
 st.set_page_config(layout="wide")
-st.title("Análisis Vehicular 🚘📊")
+st.title("Compara Bien: Análsis Vehicular")
 
 """
 
