@@ -1,5 +1,5 @@
 
-## Extraccion de datos de neoclasicos.com
+## Extraccion de Datos
 ## ======================================:
 
 ## Librerias
@@ -16,6 +16,7 @@ from tqdm import tqdm  # pip install tqdm
 import datetime as dt
 import re, time
 import json
+
 
 
 ## Extraccion de Informacion de segun el tipo de Vehicuklo y Condicion
@@ -150,7 +151,7 @@ def parse_brand_model_year(t):
 
 neo_autos = []
 
-for pagina in paginas[:2]:  # pagina = {"url": ..., "tipo": ..., "tipo_vehiculo": ...}
+for pagina in paginas:  # pagina = {"url": ..., "tipo": ..., "tipo_vehiculo": ...}
     driver.get(pagina["url"])
 
     # 1) espera a que aparezcan resultados
@@ -235,24 +236,6 @@ for pagina in paginas[:2]:  # pagina = {"url": ..., "tipo": ..., "tipo_vehiculo"
         if len(tags) == 1:
             tags = tags[0]
             
-        # img_urls = []
-        # imgs = card.find_elements(By.CSS_SELECTOR, "img.c-results-slider__img-inside, img.c-results__image, img.c-results-slider__img")  # varios selectores por si cambian
-
-        # for im in imgs:
-        #     try:
-        #         driver.execute_script("arguments[0].scrollIntoView({block:'center'});", im)
-        #     except:
-        #         pass
-        #     time.sleep(0.05)
-        #     u = im.get_attribute("data-src") or im.get_attribute("src")
-        #     if not u:
-        #         srcset = im.get_attribute("data-srcset") or im.get_attribute("srcset")
-        #         if srcset:
-        #             u = srcset.split(",")[0].strip().split()[0]
-        #     if u and u not in img_urls:
-        #         img_urls.append(u)
-
-        # img_url_primaria = img_urls[0] if img_urls else None
         
         neo_autos.append({
             "titulo": titulo,
@@ -272,23 +255,45 @@ for pagina in paginas[:2]:  # pagina = {"url": ..., "tipo": ..., "tipo_vehiculo"
             "url_auto": url,
             "tipo": pagina["tipo"],
             "pagina": pagina["url"],
-            # ## Imagenes
-            # "img_urls": img_urls,
         })
         
+        
+print(f"\nSe extrajeorn informacion de {len(neo_autos)} unidades\n")
+
+## Guardando el Archivo.
+
+ruta_salida_json = rf"C:\Users\PC\Desktop\Proyectos\Proyectos_Py\7.Analisis_Autos\vehiculos\data\categoria\neo_autos_{tipo_vehiculo}_{categoria}_{unidad}.json"
+
+print("\nGenerando archivo JSON...\n")
+
+with open(ruta_salida_json, "w", encoding="utf-8") as f:
+    json.dump(neo_autos, f, ensure_ascii=False, indent=2)
     
-print("\nExtraccion de Mayores Datos!")
+print("\nGenerando archivo CSV...\n")
+
+neo_autos_df = pd.DataFrame(neo_autos)
+ruta_salida = rf"C:\Users\PC\Desktop\Proyectos\Proyectos_Py\7.Analisis_Autos\vehiculos\data\categoria\neo_autos_{tipo_vehiculo}_{categoria}_{unidad}.csv"
+neo_autos_df.to_csv(ruta_salida
+                    , index=False
+                    , sep="|"
+                    , encoding="utf-8-sig"
+                    )
 
 
-## -- Funcion de extraccion de imagenes -- ##
+
+## Extraccion de Imagenes segun el tipo de Vehiculo y Condicion        
+## =============================================================:      
+
+
+print("\nInicio de Extraccion de Imagenes...\n") 
 
 if unidad == "nuevos":
     CDN_HINT = "cdn.neoauto.com/elements/nuevo"
 elif unidad == "usados":
     CDN_HINT = "cdn.neoauto.com/elements/autos_usados"
 else:
-    CDN_HINT = "cdn.neoauto.com/elements/autos"
-
+    CDN_HINT = "cdn.neoauto.com/elements/autos"        
+        
 
 def _best_from_srcset(srcset: str) -> str | None:
     if not srcset:
@@ -308,7 +313,7 @@ def _best_from_srcset(srcset: str) -> str | None:
         cand.append((w, url))
     return max(cand)[1] if cand else None
 
-def get_image_urls(driver, timeout=15):
+def get_image_urls(driver, timeout=10):
     wait = WebDriverWait(driver, timeout)
     wait.until(EC.presence_of_element_located((By.TAG_NAME, "body")))
     urls = set()
@@ -390,9 +395,22 @@ def get_image_urls(driver, timeout=15):
     return sorted(urls)
 
 
-## --Fin -- ##
-
-enlace_anuncio = [{"url_auto": auto["url_auto"], "titulo": auto["titulo"], "tipo_vehiculo": auto["tipo"]} for auto in neo_autos]
+enlace_anuncio = [{"url_auto": auto["url_auto"]
+                , "titulo": auto["titulo"]
+                , "tipo_vehiculo": auto["tipo"]
+                , "categoria": auto["categoria"]
+                , "marca": auto["marca"]
+                , "modelo": auto["modelo"]
+                , "año": auto["año"]
+                , "precio": auto["precio"]
+                , "detalle": auto["detalle"]
+                , "combustible": auto["combustible"]
+                , "tipo_transmision": auto["tipo_transmision"]
+                , "caja": auto["caja"]
+                , "kilometraje_km": auto["kilometraje_km"]
+                , "ubicacion": auto["ubicacion"]
+                , "tags": auto["tags"]
+                } for auto in neo_autos]
 
 W = WebDriverWait(driver, 10)
 
@@ -418,6 +436,7 @@ def get_descripcion(driver):
         (By.XPATH, "//h2[contains(.,'Descripción')]/following::div[contains(@class,'whitespace-pre-wrap')][1]"),
         (By.CSS_SELECTOR, "div.w-full.whitespace-pre-wrap.break-words.text-justify.font-ubuntu.text-base.text-black"),
         (By.CSS_SELECTOR, "div[class*='whitespace-pre-wrap'][class*='break-words'][class*='text-justify']"),
+        (By.CSS_SELECTOR, "div.flex.w-full.flex-col.gap-3xlarge.whitespace-pre-wrap.break-words")
     ]
     
     for by, selector in selectores:
@@ -432,28 +451,27 @@ def get_descripcion(driver):
 
     return None
 
-def get_especificaciones(driver):
-    """Busca el primer grid label→valor; si no existe devuelve {}."""
-    grid = driver.find_element(By.CSS_SELECTOR, "div.grid.grid-cols-2")
+# def get_especificaciones(driver):
+#     """Busca el primer grid label→valor; si no existe devuelve {}."""
+#     grid = driver.find_element(By.CSS_SELECTOR, "div.grid.grid-cols-2")
 
-    # Obtener todas las celdas (div hijos)
-    cells = grid.find_elements(By.XPATH, "./div")
+#     # Obtener todas las celdas (div hijos)
+#     cells = grid.find_elements(By.XPATH, "./div")
 
-    # Armar diccionario con pares
-    specs = {}
-    for i in range(0, len(cells), 2):
-        key = cells[i].text.strip()
-        val = cells[i+1].text.strip()
-        specs[key] = val
+#     # Armar diccionario con pares
+#     specs = {}
+#     for i in range(0, len(cells), 2):
+#         key = cells[i].text.strip()
+#         val = cells[i+1].text.strip()
+#         specs[key] = val
     
-    return specs
+#     return specs
 
-
-# --- loop principal
+        
 
 neo_autos_img = []
 
-for enlace_i in tqdm(enlace_anuncio[:5], desc="Procesando Anuncio", unit="anuncio"):
+for enlace_i in tqdm(enlace_anuncio, desc="Procesando Anuncio", unit="anuncio"):
     
     url = enlace_i["url_auto"]
     tipo = enlace_i.get("tipo_vehiculo", "").lower()
@@ -467,22 +485,28 @@ for enlace_i in tqdm(enlace_anuncio[:5], desc="Procesando Anuncio", unit="anunci
             neo_autos_img.append({
                 "titulo": enlace_i.get("titulo"),
                 "tipo_vehiculo": enlace_i.get("tipo_vehiculo"),
+                "categoria": enlace_i.get("categoria"),
+                "marca": enlace_i.get("marca"),
+                "modelo": enlace_i.get("modelo"),
+                "año": enlace_i.get("año"),
+                "precio": enlace_i.get("precio"),
+                "detalle": enlace_i.get("detalle"),
+                "combustible": enlace_i.get("combustible"),
+                "tipo_transmision": enlace_i.get("tipo_transmision"),
+                "caja": enlace_i.get("caja"),
+                "kilometraje_km": enlace_i.get("kilometraje_km"),
+                "ubicacion": enlace_i.get("ubicacion"), 
+                "tags": enlace_i.get("tags"),
                 "url_auto": url,
                 "estado": "finalizado",
                 "descripcion": None,
-                "especificaciones": {},
                 "imagenes": []
             })
             continue
 
         # activo → extraemos lo que haya
         descripcion = get_descripcion(driver)
-        
-        # Especificaciones → solo si es seminuevo o usado
-        if tipo in ["seminuevos", "usados"]:
-            especificaciones = get_especificaciones(driver)
-        else:
-            especificaciones = {}
+    
 
         # si usas tu función de imágenes:
         try:
@@ -494,60 +518,67 @@ for enlace_i in tqdm(enlace_anuncio[:5], desc="Procesando Anuncio", unit="anunci
         neo_autos_img.append({
             "titulo": enlace_i.get("titulo"),
             "tipo_vehiculo": enlace_i.get("tipo_vehiculo"),
+            "categoria": enlace_i.get("categoria"),
+            "marca": enlace_i.get("marca"),
+            "modelo": enlace_i.get("modelo"),
+            "año": enlace_i.get("año"),
+            "precio": enlace_i.get("precio"),
+            "detalle": enlace_i.get("detalle"),
+            "combustible": enlace_i.get("combustible"),
+            "tipo_transmision": enlace_i.get("tipo_transmision"),
+            "caja": enlace_i.get("caja"),
+            "kilometraje_km": enlace_i.get("kilometraje_km"),
+            "ubicacion": enlace_i.get("ubicacion"), 
+            "tags": enlace_i.get("tags"),
             "url_auto": url,
             "estado": "ok",
             "descripcion": descripcion,
-            "especificaciones": especificaciones,
             "imagenes": imagenes
         })
 
     except Exception as e:
         neo_autos_img.append({
             "titulo": enlace_i.get("titulo"),
-            "tipo_vehiculo": tipo,
+            "tipo_vehiculo": enlace_i.get("tipo_vehiculo"),
+            "categoria": enlace_i.get("categoria"),
+            "marca": enlace_i.get("marca"),
+            "modelo": enlace_i.get("modelo"),
+            "año": enlace_i.get("año"),
+            "precio": enlace_i.get("precio"),
+            "detalle": enlace_i.get("detalle"),
+            "combustible": enlace_i.get("combustible"),
+            "tipo_transmision": enlace_i.get("tipo_transmision"),
+            "caja": enlace_i.get("caja"),
+            "kilometraje_km": enlace_i.get("kilometraje_km"),
+            "ubicacion": enlace_i.get("ubicacion"), 
+            "tags": enlace_i.get("tags"),
             "url_auto": url,
             "estado": "error",
             "error_msg": str(e),
             "descripcion": None,
-            "especificaciones": {},
             "imagenes": []
         })
-        
-        
-## ============================== ##
 
-## Guardando Resultados
-
-
-print(f"\nSe extrajeorn informacion de {len(neo_autos)} unidades\n")
-
-## Guardando el Archivo.
-
-ruta_salida_json = rf"C:\Users\PC\Desktop\Proyectos\Proyectos_Py\7.Analisis_Autos\vehiculos\data\categoria\neo_autos_{tipo_vehiculo}_{categoria}_{unidad}_prueba.json"
-ruta_salida_img_json = rf"C:\Users\PC\Desktop\Proyectos\Proyectos_Py\7.Analisis_Autos\vehiculos\data\categoria\neo_autos_img_{tipo_vehiculo}_{categoria}_{unidad}_prueba.json"
+## Salida de Datos con Imagenes
+ruta_salida_img_json = rf"C:\Users\PC\Desktop\Proyectos\Proyectos_Py\7.Analisis_Autos\vehiculos\data\categoria\neo_autos_img_{tipo_vehiculo}_{categoria}_{unidad}.json"
 
 print("\nGenerando archivo JSON...\n")
-
-with open(ruta_salida_json, "w", encoding="utf-8") as f:
-    json.dump(neo_autos, f, ensure_ascii=False, indent=2)
-    
-    
 with open(ruta_salida_img_json, "w", encoding="utf-8") as f:
     json.dump(neo_autos_img, f, ensure_ascii=False, indent=2)
-
-print("\nGenerando archivo CSV...\n")
-
-neo_autos_df = pd.DataFrame(neo_autos)
-
-ruta_salida = rf"C:\Users\PC\Desktop\Proyectos\Proyectos_Py\7.Analisis_Autos\vehiculos\data\categoria\neo_autos_{tipo_vehiculo}_{categoria}_{unidad}_prueba.csv"
-
-neo_autos_df.to_csv(ruta_salida
-                    , index=False
-                    , sep="|"
-                    , encoding="utf-8-sig"
-                    )
-
-driver.quit() # Es una buena práctica cerrar el driver al final.
-
-print("\nArchivo CSV generado con exito! Fin :D\n")
-print(f"\nArchivo Creado: neo_autos_{tipo_vehiculo}_{categoria}_{unidad}.csv\n")
+    
+print("\nFin Extraccion\n")
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        

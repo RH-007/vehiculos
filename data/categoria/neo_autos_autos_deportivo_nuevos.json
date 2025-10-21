@@ -1,0 +1,53 @@
+[
+  {
+    "titulo": "Honda Type R 2024",
+    "tipo_vehiculo": "autos",
+    "categoria": "deportivo",
+    "marca": "Honda",
+    "modelo": "Type R",
+    "año": "2024",
+    "precio": "US$ 56,990",
+    "detalle": "Gasolina|Mecánica\nLima, Lima\nCompra Tu Próximo 0KM En Maquinarias Honda",
+    "combustible": "Gasolina",
+    "tipo_transmision": "Mecánica",
+    "caja": null,
+    "kilometraje_km": 0,
+    "ubicacion": "Lima, Lima",
+    "tags": "PREMIUM",
+    "url_auto": "https://neoauto.com/auto/nuevo/honda-type-r-2024-1827045",
+    "tipo": "nuevos",
+    "pagina": "https://neoauto.com/venta-de-autos-nuevos--deportivo?page=1",
+    "img_urls": [
+      "https://cdn.neoauto.com/elements/nuevo/196x165/710763/710763_4325575.webp",
+      "https://cdn.neoauto.com/elements/nuevo/196x165/710763/710763_7870915.webp",
+      "https://cdn.neoauto.com/elements/nuevo/196x165/710763/710763_7533990.webp",
+      "https://cdn.neoauto.com/elements/nuevo/196x165/710763/710763_1513129.webp",
+      "https://cdn.neoauto.com/elements/nuevo/196x165/710763/710763_1259734.webp"
+    ]
+  },
+  {
+    "titulo": "Mazda Mx 5 2025",
+    "tipo_vehiculo": "autos",
+    "categoria": "deportivo",
+    "marca": "Mazda",
+    "modelo": "Mx 5",
+    "año": "2025",
+    "precio": "US$ 43,490",
+    "detalle": "Gasolina|Automática\nLima, Lima\nCompra Tu Próximo 0KM En Maquinarias Mazda",
+    "combustible": "Gasolina",
+    "tipo_transmision": "Automática",
+    "caja": null,
+    "kilometraje_km": 0,
+    "ubicacion": "Lima, Lima",
+    "tags": "PREMIUM",
+    "url_auto": "https://neoauto.com/auto/nuevo/mazda-mx-5-2025-1827040",
+    "tipo": "nuevos",
+    "pagina": "https://neoauto.com/venta-de-autos-nuevos--deportivo?page=1",
+    "img_urls": [
+      "https://cdn.neoauto.com/elements/nuevo/196x165/708984/708984_7767764.webp",
+      "https://cdn.neoauto.com/elements/nuevo/196x165/708984/708984_7759277.webp",
+      "https://cdn.neoauto.com/elements/nuevo/196x165/708984/708984_9701154.webp",
+      "https://cdn.neoauto.com/elements/nuevo/196x165/708984/708984_4886277.webp"
+    ]
+  }
+]

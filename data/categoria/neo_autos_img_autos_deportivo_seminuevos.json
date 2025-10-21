@@ -1,0 +1,392 @@
+[
+  {
+    "titulo": "Mercedes Benz Sec380 1983",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/mercedes-benz-sec380-1983-1827320",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Maserati Grand Turismo 2018",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/maserati-grand-turismo-2018-1840593",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Lotus Elise 2008",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/lotus-elise-2008-1846642",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Bmw M240i 2023",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/bmw-m240i-2023-1845432",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Bmw I4 2024",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/bmw-i4-2024-1803124",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Bmw M3 2011",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/bmw-m3-2011-1851809",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Mercedes Benz Amg Sl 55 4matic+ 2022",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/mercedes-benz-amg-sl-55-4matic-2022-1817540",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Mercedes Benz C 63 Amg S 2017",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/mercedes-benz-c-63-amg-s-2017-1851776",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Bmw M235i 2014",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/bmw-m235i-2014-1851565",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Ford Mustang 1966",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/ford-mustang-1966-1783756",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Mercedes Benz Slc-380 1981",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/mercedes-benz-slc-380-1981-1848259",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Ferrari 812 Superfast 2019",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/ferrari-812-superfast-2019-1846006",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Bmw M2 Coupe 2018",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/bmw-m2-coupe-2018-1824825",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Mc Laren 570s Spyder 2018",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/mc-laren-570s-spyder-2018-1851979",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Bmw 420i Gran Coupe 2019",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/bmw-420i-gran-coupe-2019-1841661",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Mercedes Benz Cla 45 Amg 2019",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/mercedes-benz-cla-45-amg-2019-1762827",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Mercedes Benz A 35 Amg 2025",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/mercedes-benz-a-35-amg-2025-1851146",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Bmw M4 2015",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/bmw-m4-2015-1847682",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Ford Mustang Gt 2025",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/ford-mustang-gt-2025-1852453",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Porsche Taycan 2024",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/porsche-taycan-2024-1832180",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Porsche Cayenne Coupe 2024",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/porsche-cayenne-coupe-2024-1844564",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Mercedes Benz C 63 Amg S 2017",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/mercedes-benz-c-63-amg-s-2017-1845453",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Ford Mustang 1967",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/ford-mustang-1967-1844392",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Bmw M6 2016",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/bmw-m6-2016-1843409",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Maserati Granturismo 2013",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/maserati-granturismo-2013-1837389",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Bmw M4 2017",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/bmw-m4-2017-1848398",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Mercedes Benz E 63 Amg 2021",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/mercedes-benz-e-63-amg-2021-1852608",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Bmw M5 2023",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/bmw-m5-2023-1848896",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Lancia Beta 1985",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/lancia-beta-1985-1838729",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Volvo 262 1981",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/volvo-262-1981-1837385",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Aston Martin Vanquish 2016",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/aston-martin-vanquish-2016-1850172",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Bmw M4 2019",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/bmw-m4-2019-1850917",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Mercedes Benz C-250 2013",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/mercedes-benz-c-250-2013-1851025",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Bmw M235i 2016",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/bmw-m235i-2016-1850521",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Bmw M6 2015",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/bmw-m6-2015-1846371",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Bmw M235i 2015",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/bmw-m235i-2015-1841698",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Bmw M240i 2023",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/bmw-m240i-2023-1824319",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Chevrolet Camaro 2017",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/chevrolet-camaro-2017-1850924",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  },
+  {
+    "titulo": "Bmw M2 Coupe 2020",
+    "tipo_vehiculo": "autos",
+    "url_auto": "https://neoauto.com/auto/seminuevo/bmw-m2-coupe-2020-1850150",
+    "estado": "error",
+    "error_msg": "Message: no such element: Unable to locate element: {\"method\":\"css selector\",\"selector\":\"div.grid.grid-cols-2\"}\n  (Session info: chrome=140.0.7339.208); For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception\nStacktrace:\n\tGetHandleVerifier [0x0x11dc333+65459]\n\tGetHandleVerifier [0x0x11dc374+65524]\n\t(No symbol) [0x0xffd973]\n\t(No symbol) [0x0x10476e7]\n\t(No symbol) [0x0x1047a8b]\n\t(No symbol) [0x0x108dea2]\n\t(No symbol) [0x0x1069e44]\n\t(No symbol) [0x0x108b606]\n\t(No symbol) [0x0x1069bf6]\n\t(No symbol) [0x0x103b38e]\n\t(No symbol) [0x0x103c274]\n\tGetHandleVerifier [0x0x145eda3+2697763]\n\tGetHandleVerifier [0x0x1459ec7+2677575]\n\tGetHandleVerifier [0x0x1204194+228884]\n\tGetHandleVerifier [0x0x11f49f8+165496]\n\tGetHandleVerifier [0x0x11fb18d+192013]\n\tGetHandleVerifier [0x0x11e47d8+99416]\n\tGetHandleVerifier [0x0x11e4972+99826]\n\tGetHandleVerifier [0x0x11cebea+10346]\n\tBaseThreadInitThunk [0x0x75bb5d49+25]\n\tRtlInitializeExceptionChain [0x0x779fd6db+107]\n\tRtlGetAppContainerNamedObjectPath [0x0x779fd661+561]\n",
+    "descripcion": null,
+    "especificaciones": {},
+    "imagenes": []
+  }
+]
