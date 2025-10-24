@@ -18,14 +18,12 @@ st.set_page_config(layout="wide")
 st.title("Compara Bien: Mercado Vehicular")
 
 """
-
 Aqui podemos agregar una descripción del proyecto, su objetivo y las herramientas que se utilizarán.
 
 El objetivo del aplicativo es descrbir, comparar y analizar los datos de vehiculos usados, seminuevos y nuevos 
 segun diferentes tipos de vehiculo, marcas, modelos, años, precios, km, etc. 
 
 Se usa como fuente de datos la pagina web Neo Autos (https://www.neoautos.com/) y se emplea la libreria Streamlit para crear el aplicativo web.
-
 ---
 """
 
