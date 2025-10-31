@@ -79,7 +79,7 @@ paginas_consulta = int(re.sub(r'[^\d]', '', resultados.text.split()[0]))
 
 print("\nNumero de Anuncios a extraer:", paginas_consulta)
 
-numero_paginas = (paginas_consulta // 20) + 1
+numero_paginas = 3 ##(paginas_consulta // 20) + 1
 
 print("\nNumero de paginas a extraer:", numero_paginas)
 

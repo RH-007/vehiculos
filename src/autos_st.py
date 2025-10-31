@@ -1,4 +1,3 @@
-
 ## Proyecto Análisis de Autos
 ## ===========================:
 
@@ -24,13 +23,13 @@ El objetivo del aplicativo es descrbir, comparar y analizar los datos de vehicul
 segun diferentes tipos de vehiculo, marcas, modelos, años, precios, km, etc. 
 
 Se usa como fuente de datos la pagina web Neo Autos (https://www.neoautos.com/) y se emplea la libreria Streamlit para crear el aplicativo web.
----
+hola
 """
 
 ## Carga de datos
-file_path_general = "./data/neo_autos_general.csv"
-file_path_categoria = "./data/neo_autos_categoria.csv"
-file_path_json = rf"C:\Users\PC\Desktop\Proyectos\Proyectos_Py\7.Analisis_Autos\neo_autos_img_autos_camionetas-suv_seminuevos.json"
+file_path_general = rf"C:\Users\PC\Desktop\Proyectos\Proyectos_Py\7.Analisis_Autos\vehiculos\data\neo_autos_categoria.csv"
+file_path_categoria = rf"C:\Users\PC\Desktop\Proyectos\Proyectos_Py\7.Analisis_Autos\vehiculos\data\neo_autos_categoria.csv"
+file_path_json = rf"C:\Users\PC\Desktop\Proyectos\Proyectos_Py\7.Analisis_Autos\vehiculos\data\neo_autos_img.json"
 
 
 @st.cache_data
