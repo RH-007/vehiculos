@@ -1,7 +1,10 @@
-streamlit
 pandas
-hashlib
-uuid
-json
-
-
+numpy
+streamlit
+google-generativeai
+faiss-cpu
+selenium
+webdriver-manager
+tqdm
+Pillow
+requests
