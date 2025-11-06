@@ -30,9 +30,9 @@ Se usa como fuente de datos la pagina web Neo Autos (https://www.neoautos.com/)
 # file_path_json = rf"C:\Users\PC\Desktop\Proyectos\Proyectos_Py\7.Analisis_Autos\vehiculos\data\neo_autos_img.json"
 
 ## Carga de datos
-file_path_general = rf"..\data\neo_autos_categoria.csv"
-file_path_categoria = rf"..\data\neo_autos_categoria.csv"
-file_path_json = rf"..\data\neo_autos_img.json"
+file_path_general = "./data/neo_autos_general.csv"
+file_path_categoria = "./data/neo_autos_categoria.csv"
+file_path_json = "./data/neo_autos_img.json"
 
 
 @st.cache_data
