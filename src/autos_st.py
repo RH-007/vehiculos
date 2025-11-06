@@ -14,16 +14,15 @@ import json
 
 ## Titulo
 st.set_page_config(layout="wide")
-st.title("Compara Bien: Mercado Vehicular")
+st.title("Compara Bien - Mercado Vehicular")
 
 """
-Aqui podemos agregar una descripción del proyecto, su objetivo y las herramientas que se utilizarán.
 
 El objetivo del aplicativo es descrbir, comparar y analizar los datos de vehiculos usados, seminuevos y nuevos 
 segun diferentes tipos de vehiculo, marcas, modelos, años, precios, km, etc. 
 
-Se usa como fuente de datos la pagina web Neo Autos (https://www.neoautos.com/) y se emplea la libreria Streamlit para crear el aplicativo web.
-hola
+Se usa como fuente de datos la pagina web Neo Autos (https://www.neoautos.com/) 
+
 """
 
 ## Carga de datos
@@ -63,101 +62,9 @@ precio_etiqueta.append("Todos")
 ##      Pestañas     ##
 ## ==================##
     
-tab1, tab2, tab3, tab4 = st.tabs(["🔎 Análisis General", "📦 Categorias", "📊 Seminuevos", "💰 Usados"])
+tab1, tab2 = st.tabs(["Categorias", "Compara"])
 
 
-## ================ ##
-## Analisis General ##
-## ================ ##
-
-with tab1:
-
-    c1, c2, c3 = st.columns(3, gap="small")
-    with c1:
-        st.markdown("**Tipo de Autos**")
-        input_tipo = st.selectbox(
-            "Tipo de Auto", tipo, key="key_tipo",
-            label_visibility="collapsed"
-        )
-        
-    with c2:
-        st.markdown("**Elegir marca**")
-        input_marca = st.selectbox(
-            "marca", marca, key="key_marca",
-            label_visibility="collapsed"
-        )
-        
-    ## Modelo (Filtro dinámico)
-    # Creamos un dataframe temporal para filtrar los modelos disponibles.
-    # Esto asegura que la lista de modelos se actualice según las selecciones de tipo y marca.
-    df_para_modelos = data_general.copy()
-    if input_tipo != "Todos":
-        df_para_modelos = df_para_modelos[df_para_modelos["tipo"] == input_tipo]
-    if input_marca != "Todos":
-        df_para_modelos = df_para_modelos[df_para_modelos["marca"] == input_marca]
-
-    modelos = df_para_modelos["modelo"].unique().tolist()
-    modelos.append("Todos")
-        
-    with c3:
-        st.markdown("**Elegir Modelo**")
-        # Renombramos la variable y la key para mayor claridad (input_zona -> input_modelo)
-        input_modelo = st.selectbox(
-            "Elegir Modelo",
-            modelos,
-            key="key_modelo",
-            label_visibility="collapsed",
-            index=0
-        )
-
-    ## Filtrado de Datos
-    # Empezamos con el dataframe completo y aplicamos filtros secuencialmente.
-    # Este método es robusto y maneja todas las combinaciones de "Todos".
-    df_filtrado = data_general.copy()
-
-    if input_tipo != "Todos":
-        df_filtrado = df_filtrado[df_filtrado["tipo"] == input_tipo]
-    
-    if input_marca != "Todos":
-        df_filtrado = df_filtrado[df_filtrado["marca"] == input_marca]
-
-    if input_modelo != "Todos":
-        df_filtrado = df_filtrado[df_filtrado["modelo"] == input_modelo]
-
-    st.write("Cantidad de autos encontrados:", df_filtrado.shape[0])
-    # st.dataframe(df_filtrado, use_container_width=True, height=1000)
-    
-    existing_cols = [
-        "url_auto", "titulo","modelo", "año", 
-        "kilometraje_km", "precio", "precio_etiqueta",
-        "tipo_transmision", "detalle", 
-        ]
-    
-    config = {
-        # "precio": st.column_config.TextColumn("Fuente", disabled=True),
-        # "direccion": st.column_config.TextColumn("Dirección", disabled=True),
-        # "area": st.column_config.NumberColumn("Área", format="%d m²", width="small", disabled=True),
-        # "dormitorio": st.column_config.NumberColumn("Dorm.", width="small", disabled=True),
-        # "baños": st.column_config.NumberColumn("Baños", width="small", disabled=True),
-        # "estacionamientos": st.column_config.NumberColumn("Estac.", width="small", disabled=True),
-        # "caracteristica": st.column_config.TextColumn("Características", disabled=True),
-        # "enlace": st.column_config.LinkColumn("Anuncio", display_text="🔗 Abrir", validate=r"^https?://.*$"),
-        "precio": st.column_config.NumberColumn("Precio ($.)", format="$. %d", disabled=True),
-        "kilometraje_km": st.column_config.NumberColumn("km", format="%d km.", disabled=True),
-        "tipo_transmision": st.column_config.TextColumn("Transmision", disabled=True),
-        "url_auto": st.column_config.LinkColumn("Anuncio", display_text="🔗 Abrir", validate=r"^https?://.*$"),
-    }
-
-    
-    
-    st.data_editor(
-        df_filtrado[existing_cols].sort_values("precio", ascending=True)
-        , hide_index=True
-        , use_container_width=True
-        , column_config=config
-        , disabled=True
-        # , height=1000
-    )
     
 ## ========== ##
 ## Categoria  ##
@@ -175,7 +82,7 @@ precio_etiqueta_c = ["Todos"] +  data_categoria["precio_etiqueta"].unique().toli
 
 categoria_c = ["Todos"] +  data_categoria["categoria"].unique().tolist()
 
-with tab2:
+with tab1:
     
     st.subheader("Estadisticas por Categoria", divider = "blue")
     
@@ -235,7 +142,7 @@ with tab2:
     )
 
 
-    st.subheader("Análisis Detallado por Vehículo", divider="blue")
+    st.subheader("Anuncio por Tipo de Vehiculo, Categoria,  Marca y Modelo", divider="blue")
 
     c1, c2, c3, c4 = st.columns(4, gap="small")
 
@@ -316,16 +223,16 @@ with tab2:
         , disabled=True
     )
     
-## =========== ##
-## Seminuevos  ##
-## =========== ##
+## ======== ##
+## Compara  ##
+## ======== ##
 
 marcas_all = data_img["marca"].unique().tolist()
 
 df = data_img.copy()
 df["tipo_vehiculo"] = df["tipo_vehiculo"].str.lower().str.strip()
 df["categoria"] = df["categoria"].str.lower().str.strip()
-df = df[(df["tipo_vehiculo"] == "seminuevos") & (df["categoria"] == "camionetas-suv")].copy()
+# df = df[(df["tipo_vehiculo"] == "seminuevos") & (df["categoria"] == "camionetas-suv")].copy()
 
 
 # Helpers
@@ -418,15 +325,6 @@ def _badge(text):
         display:inline-block;background:#202633;border:1px solid #2c3547;
         padding:2px 8px;border-radius:999px;font-size:0.85rem;margin-right:6px;">
         {text}</span>"""
-
-# # ---- Carrusel simple (slider) ----
-# def image_carousel(urls, key_base: str):
-#     if not urls:
-#         st.info("Sin imágenes.")
-#         return
-#     k = _uniq_key(key_base)
-#     idx = st.slider("Imágenes", 1, len(urls), 1, key=f"crsl_{k}", label_visibility="collapsed")
-#     st.image(urls[idx-1], use_container_width =True, caption=f"{idx}/{len(urls)}")
 
 def tarjeta_mejorada(aviso: dict, titulo_btn: str):
     # CARRUSEL
@@ -578,48 +476,87 @@ def image_carousel_with_arrows(img_urls, *, height=520, show_thumbs=True, key_ba
     
 ## presentacion de Resultados            
             
-with tab3:
-    st.subheader("Comparar Modelos (Seminuevos • SUV)", divider="blue")
+with tab2:
+    st.subheader("Comparar Vehiculos", divider="blue")
 
     # Listas de marcas disponibles
     marcas_all = sorted(df["marca"].dropna().unique().tolist())
     colA, colB = st.columns(2)
 
     # ======= LADO A =======
-    marca1 = colA.selectbox("Marca 1", ["(Elige)"] + marcas_all, key="semi_marca1")
-    if marca1 != "(Elige)":
-        modelos_marca1 = sorted(df[df["marca"] == marca1]["modelo"].dropna().unique().tolist())
-    else:
-        modelos_marca1 = []
-    modelo1 = colA.selectbox("Modelo 1", ["(Elige)"] + modelos_marca1, key="semi_modelo1")
+    with colA:
+        df_a_filtered = df.copy()
 
-    df_a = df[(df["marca"] == marca1) & (df["modelo"] == modelo1)] if (marca1 != "(Elige)" and modelo1 != "(Elige)") else df.head(0)
-    if len(df_a) > 0:
+        # 1. Tipo de Vehículo
+        tipos_vehiculo_a = ["(Elige)"] + sorted(df_a_filtered["tipo_vehiculo"].dropna().unique().tolist())
+        tipo1 = st.selectbox("Tipo de Vehículo (A)", tipos_vehiculo_a, key="semi_tipo1")
+        if tipo1 != "(Elige)":
+            df_a_filtered = df_a_filtered[df_a_filtered["tipo_vehiculo"] == tipo1]
+
+        # 2. Categoría
+        categorias_a = ["(Elige)"] + sorted(df_a_filtered["categoria"].dropna().unique().tolist())
+        categoria1 = st.selectbox("Categoría (A)", categorias_a, key="semi_categoria1", disabled=(tipo1 == "(Elige)"))
+        if categoria1 != "(Elige)":
+            df_a_filtered = df_a_filtered[df_a_filtered["categoria"] == categoria1]
+
+        # 3. Marca
+        marcas_a = ["(Elige)"] + sorted(df_a_filtered["marca"].dropna().unique().tolist())
+        marca1 = st.selectbox("Marca (A)", marcas_a, key="semi_marca1", disabled=(categoria1 == "(Elige)"))
+        if marca1 != "(Elige)":
+            df_a_filtered = df_a_filtered[df_a_filtered["marca"] == marca1]
+
+        # 4. Modelo
+        modelos_a = ["(Elige)"] + sorted(df_a_filtered["modelo"].dropna().unique().tolist())
+        modelo1 = st.selectbox("Modelo (A)", modelos_a, key="semi_modelo1", disabled=(marca1 == "(Elige)"))
+        if modelo1 != "(Elige)":
+            df_a_filtered = df_a_filtered[df_a_filtered["modelo"] == modelo1]
+
+        df_a = df_a_filtered.copy()
+
+    if not df_a.empty and modelo1 != "(Elige)":
         opts_a, tmp_a = _opciones_ofertas(df_a)
-        oferta1 = colA.selectbox("Oferta 1 (orden: precio ↑)", opts_a if opts_a else ["(Sin ofertas)"], key="semi_oferta1")
+        oferta1 = colA.selectbox("Oferta 1 (orden: por precio)", opts_a if opts_a else ["(Sin ofertas)"], key="semi_oferta1")
         sel_a = tmp_a.iloc[opts_a.index(oferta1)].to_dict() if opts_a else None
     else:
         sel_a = None     
         
     # ======= LADO B =======
-    marca2 = colB.selectbox("Marca 2", ["(Elige)"] + marcas_all, key="semi_marca2")
-    if marca2 != "(Elige)":
-        modelos_marca2 = sorted(df[df["marca"] == marca2]["modelo"].dropna().unique().tolist())
-    else:
-        modelos_marca2 = []
-    modelo2 = colB.selectbox("Modelo 2", ["(Elige)"] + modelos_marca2, key="semi_modelo2")
+    
+    with colB:
+        df_b_filtered = df.copy()
 
-    df_b = df[(df["marca"] == marca2) & (df["modelo"] == modelo2)] if (marca2 != "(Elige)" and modelo2 != "(Elige)") else df.head(0)
-    if len(df_b) > 0:
+        # 1. Tipo de Vehículo
+        tipos_vehiculo_b = ["(Elige)"] + sorted(df_b_filtered["tipo_vehiculo"].dropna().unique().tolist())
+        tipo2 = st.selectbox("Tipo de Vehículo (B)", tipos_vehiculo_b, key="semi_tipo2")
+        if tipo2 != "(Elige)":
+            df_b_filtered = df_b_filtered[df_b_filtered["tipo_vehiculo"] == tipo2]
+
+        # 2. Categoría
+        categorias_b = ["(Elige)"] + sorted(df_b_filtered["categoria"].dropna().unique().tolist())
+        categoria2 = st.selectbox("Categoría (B)", categorias_b, key="semi_categoria2", disabled=(tipo2 == "(Elige)"))
+        if categoria1 != "(Elige)":
+            df_b_filtered = df_b_filtered[df_b_filtered["categoria"] == categoria2]
+
+        # 3. Marca
+        marcas_b = ["(Elige)"] + sorted(df_b_filtered["marca"].dropna().unique().tolist())
+        marca2 = st.selectbox("Marca (B)", marcas_b, key="semi_marca2", disabled=(categoria2 == "(Elige)"))
+        if marca2 != "(Elige)":
+            df_b_filtered = df_b_filtered[df_b_filtered["marca"] == marca2]
+
+        # 4. Modelo
+        modelos_b = ["(Elige)"] + sorted(df_b_filtered["modelo"].dropna().unique().tolist())
+        modelo2 = st.selectbox("Modelo (B)", modelos_b, key="semi_modelo2", disabled=(marca2 == "(Elige)"))
+        if modelo1 != "(Elige)":
+            df_b_filtered = df_b_filtered[df_b_filtered["modelo"] == modelo2]
+
+        df_b = df_b_filtered.copy()
+
+    if not df_b.empty and modelo2 != "(Elige)":
         opts_b, tmp_b = _opciones_ofertas(df_b)
-        oferta2 = colB.selectbox("Oferta 2 (orden: precio ↑)", opts_b if opts_b else ["(Sin ofertas)"], key="semi_oferta2")
+        oferta2 = colB.selectbox("Oferta 1 (orden: precio ↑)", opts_b if opts_b else ["(Sin ofertas)"], key="semi_oferta2")
         sel_b = tmp_b.iloc[opts_b.index(oferta2)].to_dict() if opts_b else None
     else:
-        sel_b = None       
-        
-    # ======= TÍTULO COMPARATIVO =======
-    if (marca1 != "(Elige)" and modelo1 != "(Elige)") and (marca2 != "(Elige)" and modelo2 != "(Elige)"):
-        st.markdown(f"### Comparación : {marca1} {modelo1} vs {marca2} {modelo2}")
+        sel_b = None  
 
     # ======= TARJETAS =======
     colL, colR = st.columns(2)
@@ -700,4 +637,3 @@ with tab3:
     
         st.markdown("#### Comparativa rápida")
         st.table(tabla)
-
