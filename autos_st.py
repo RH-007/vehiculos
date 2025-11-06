@@ -30,9 +30,9 @@ Se usa como fuente de datos la pagina web Neo Autos (https://www.neoautos.com/)
 # file_path_json = rf"C:\Users\PC\Desktop\Proyectos\Proyectos_Py\7.Analisis_Autos\vehiculos\data\neo_autos_img.json"
 
 ## Carga de datos
-# file_path_general = "./data/neo_autos_general.csv"
-# file_path_categoria = "./data/neo_autos_categoria.csv"
-# file_path_json = "./data/neo_autos_img.json"
+file_path_general = "./data/neo_autos_general.csv"
+file_path_categoria = "./data/neo_autos_categoria.csv"
+file_path_json = "./data/neo_autos_img.json"
 
 
 @st.cache_data
@@ -46,9 +46,6 @@ def load_json_specs(file_path):
         data = json.load(f)
     return pd.DataFrame(data)
 
-# data_general = load_data(file_path_general)
-# data_categoria = load_data(file_path_categoria)
-# data_img = load_json_specs(file_path_json)
 
 data_general = load_data("./data/neo_autos_categoria.csv")
 data_categoria = load_data("./data/neo_autos_categoria.csv")
