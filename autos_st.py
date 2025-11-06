@@ -50,7 +50,7 @@ def load_json_specs(file_path):
 # data_categoria = load_data(file_path_categoria)
 # data_img = load_json_specs(file_path_json)
 
-data_general = load_data("./data/neo_autos_general.csv")
+data_general = load_data("./data/neo_autos_categoria.csv")
 data_categoria = load_data("./data/neo_autos_categoria.csv")
 data_img = load_json_specs("./data/neo_autos_img.json")
 
