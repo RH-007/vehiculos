@@ -12,12 +12,10 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import TimeoutException
 import pandas as pd
-from tqdm import tqdm  # pip install tqdm
+from tqdm import tqdm 
 import datetime as dt
 import re, time
 import json
-
-
 
 ## Extraccion de Informacion de segun el tipo de Vehicuklo y Condicion
 
@@ -79,7 +77,7 @@ paginas_consulta = int(re.sub(r'[^\d]', '', resultados.text.split()[0]))
 
 print("\nNumero de Anuncios a extraer:", paginas_consulta)
 
-numero_paginas = 3 ##(paginas_consulta // 20) + 1
+numero_paginas = (paginas_consulta // 20) + 1
 
 print("\nNumero de paginas a extraer:", numero_paginas)
 
